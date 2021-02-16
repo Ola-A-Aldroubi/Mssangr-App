@@ -4,7 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint-init": "eslint --init",
+    "eslint": "eslint .",
+    "eslint-fix": "eslint . --fix"
+  },
+  "husky": {
+    "hooks": {
+      "precommit": "npm run eslint-fix"
+    }
   },
   "repository": {
     "type": "git",
@@ -16,5 +24,11 @@
   "bugs": {
     "url": "https://github.com/Ola-A-Aldroubi/Mssangr-App/issues"
   },
-  "homepage": "https://github.com/Ola-A-Aldroubi/Mssangr-App#readme"
+  "homepage": "https://github.com/Ola-A-Aldroubi/Mssangr-App#readme",
+  "devDependencies": {
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "^5.0.9"
+  }
 }
